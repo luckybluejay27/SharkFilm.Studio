@@ -18,8 +18,11 @@ async function loadRoutes() {
         const component = await (resolver as () => Promise<{ default: any }>)();
         const name = component.default?.name || fileName;
 
+        // If this is the Home component, set its route path to '/'
+        const routePath = name === 'Home' ? '/' : `/${fileName.toLowerCase()}`;
+
         return {
-          path: `/${fileName.toLowerCase()}`,
+          path: routePath,
           name,
           component: component.default,
         } as RouteRecordRaw;
@@ -27,7 +30,7 @@ async function loadRoutes() {
     )
   ).filter((route): route is RouteRecordRaw => route !== null);
 
-  // Define custom order: Home > Commissions > Contracting > Resources
+  // Custom order: Home > Commissions > Contracting > Resources
   const customOrder = ['Home', 'Commissions', 'Contracting', 'Resources'];
   routes.sort((a, b) => {
     const indexA = customOrder.indexOf(a.name as string);
@@ -38,31 +41,24 @@ async function loadRoutes() {
   return routes;
 }
 
-// Create router first with empty routes
+// Create router first with empty routes array
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [], // Placeholder, will be updated later
+  routes: [], // Placeholder, will be updated asynchronously
 });
 
 // Load routes asynchronously and update the router
 loadRoutes().then((routes) => {
   routes.forEach((route) => router.addRoute(route));
-  
-  // Now set up the root path to redirect to Home if available
-  const homeRoute = router.getRoutes().find(route => route.name === 'Home');
-  if (homeRoute) {
-    router.addRoute({ path: '/', redirect: homeRoute.path });
-  }   
-});
-loadRoutes().then((routes) => {
-  routes.forEach((route) => router.addRoute(route));
-  console.log("Routes loaded:", router.getRoutes());
-  const homeRoute = router.getRoutes().find((route) => route.name === 'Home');
-  if (homeRoute) {
-    router.addRoute({ path: '/', redirect: homeRoute.path });
-    console.log("Default redirect added to:", homeRoute.path);
-  } else {
-    console.warn("Home route not found!");
+
+  // If the current route is '/' (initial page load) but Home wasn't loaded then,
+  // force a navigation to Home.
+  if (router.currentRoute.value.path === '/') {
+    const homeRoute = router.getRoutes().find((route) => route.name === 'Home');
+    if (homeRoute) {
+      router.replace(homeRoute.path);
+      console.log("Redirecting '/' to Home:", homeRoute.path);
+    }
   }
 });
 
