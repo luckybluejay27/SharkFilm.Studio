@@ -1,0 +1,26 @@
+- HomeView ("Home")
+-- Intro
+-- Navigation Links
+-- Contact Info
+-- (Optional) Ongoing Projects  
+
+- ContractView ("Contracting")
+-- What You Do
+-- Notable Past Work
+-- How to Contact  
+
+- CommissionView ("Commissions")
+-- Pricing & Packages
+-- Payment Methods
+-- How It Works
+-- Purchase Links  
+
+- ResourceView ("Resources")
+-- Fan Resources
+--- Subscribestar / Patreon / Donations
+--- Multimedia Links
+--- Work Archive  
+-- Worker Resources
+--- Cloud Storage & Repos
+--- Guidelines & Documentation
+--- (Optional) Login Access  
