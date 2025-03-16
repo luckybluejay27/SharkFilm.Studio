@@ -1,1 +1,3 @@
-npm run build && npm run deploy
+- git add .
+- git commit -m "Deploy to Gh"
+- npm run build && npm run deploy
