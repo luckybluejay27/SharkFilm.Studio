@@ -16,13 +16,26 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 
-defineProps({
-  isNavOpen: Boolean
+const { isNavOpen } = defineProps({
+  isNavOpen: Boolean,
 });
 
 const router = useRouter();
-const routes = router.getRoutes().filter(route => route.name && route.name !== 'unknown');
+// Create a reactive ref for routes
+const routes = ref(router.getRoutes().filter(route => route.name && route.name !== 'unknown'));
+
+const updateRoutes = () => {
+  routes.value = router.getRoutes().filter(route => route.name && route.name !== 'unknown');
+};
+
+onMounted(() => {
+  updateRoutes();
+  const interval = setInterval(updateRoutes, 500);
+  onUnmounted(() => {
+    clearInterval(interval);
+  });
+});
 </script>

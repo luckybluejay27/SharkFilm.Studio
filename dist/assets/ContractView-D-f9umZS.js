@@ -1,0 +1,1 @@
+import{d as t,c as n,a,o}from"./index-D9RWPejB.js";const s={class:"page"},p=t({name:"Contracting",__name:"ContractView",setup(r){return(c,e)=>(o(),n("div",s,e[0]||(e[0]=[a("h1",null,"Contracting",-1)])))}});export{p as default};
