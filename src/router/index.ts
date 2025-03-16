@@ -49,10 +49,10 @@ loadRoutes().then((routes) => {
   routes.forEach((route) => router.addRoute(route));
   
   // Now set up the root path to redirect to Home if available
-  const homeRoute = router.getRoutes().find((route) => route.name === 'Home');
+  const homeRoute = router.getRoutes().find(route => route.name === 'Home');
   if (homeRoute) {
     router.addRoute({ path: '/', redirect: homeRoute.path });
-  }
+  }   
 });
 
 export default router;
