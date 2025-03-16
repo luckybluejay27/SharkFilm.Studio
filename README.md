@@ -1,5 +1,19 @@
-# Vue 3 + TypeScript + Vite
+# SharkFilm.Studio Deployment Guide
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This guide outlines the steps and Git commands needed to build the project and deploy it to the `gh-pages` branch on GitHub. Use these instructions whenever you update your site.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Prerequisites
+
+- **Node.js** and **npm** are installed.
+- Your project is using **Vite** and **Vue 3** with TypeScript.
+- `vite.config.ts` is configured with the correct base URL:
+  ```ts
+  export default defineConfig({
+    plugins: [vue()],
+    base: '/SharkFilm.Studio/',  // Adjust as needed for GitHub Pages
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      },
+    },
+  })
