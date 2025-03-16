@@ -54,5 +54,16 @@ loadRoutes().then((routes) => {
     router.addRoute({ path: '/', redirect: homeRoute.path });
   }   
 });
+loadRoutes().then((routes) => {
+  routes.forEach((route) => router.addRoute(route));
+  console.log("Routes loaded:", router.getRoutes());
+  const homeRoute = router.getRoutes().find((route) => route.name === 'Home');
+  if (homeRoute) {
+    router.addRoute({ path: '/', redirect: homeRoute.path });
+    console.log("Default redirect added to:", homeRoute.path);
+  } else {
+    console.warn("Home route not found!");
+  }
+});
 
 export default router;
