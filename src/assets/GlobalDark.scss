@@ -39,6 +39,7 @@ body {
   min-height: 92vh;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -284,4 +285,33 @@ nav {
 .bot-socials .social-icon img {
   width: clamp(3vh, 3vw, 4vh);
   height: auto;
+}
+
+// Home Elements
+.splash-wrapper {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.SharkSplash {
+  filter: brightness(0%) saturate(100%) invert(17%) sepia(28%) saturate(447%) hue-rotate(159deg) brightness(95%) contrast(96%);
+  max-width: 80%;
+  height: auto;
+  scale: 115%;
+  transform: translateY(3vh);
+}
+
+.spacer {
+  height: 30vh;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.06)
+  );
 }

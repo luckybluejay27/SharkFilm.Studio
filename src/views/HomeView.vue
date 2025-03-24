@@ -1,6 +1,12 @@
 <template>
-  <div class="page">
-    <h1>Home</h1>
+    <div class="page">
+    <div class="splash-wrapper">
+      <img src="/src/assets/SharkSplashTitle.svg" class="SharkSplash" />
+    </div>
+    <div class="spacer" />
+    <!-- other content would go here -->
+     <h1> Other Contents</h1>
+     
   </div>
 </template>
 

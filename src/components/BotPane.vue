@@ -1,7 +1,4 @@
 <template>
-  <div class="bot-arrow-container">
-    <div class="bot-arrow">&#x25B2;</div>
-  </div>
   <div class="bot-container">
     <div class="bot-content">
       <div class="bot-advertise-container">
@@ -32,7 +29,7 @@
       </div>
     </div>
     <div class="bot-socials">
-      <a href="https://bsky.app/" target="_blank" class="social-icon">
+      <a href="https://bsky.app/profile/jadecandy.bsky.social/" target="_blank" class="social-icon">
         <img src="@/assets/BskyLogo.svg" alt="Bluesky">
         <span class="social-text">Bluesky</span>
       </a>
