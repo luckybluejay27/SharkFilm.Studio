@@ -1,12 +1,14 @@
 <template>
-    <div class="page">
+  <div class="page">
     <div class="splash-wrapper">
       <img src="/src/assets/SharkSplashTitle.svg" class="SharkSplash" />
     </div>
     <div class="spacer" />
-    <!-- other content would go here -->
-     <h1> Other Contents</h1>
-     
+
+    <div class="HomeContainer">
+      <div class="header1">Sharp Stories, Honest Depth</div>
+      <h2> Recent Work Here</h2>
+    </div>
   </div>
 </template>
 
@@ -16,4 +18,21 @@ defineOptions({
   name: "Home"
 });
 </script>
- 
+
+<style scoped>
+.HomeContainer {
+  height: 92vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center;
+  padding-top: 2rem;
+}
+
+
+.header1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  text-align: center;
+  width: 100%;
+}
+</style>

@@ -26,6 +26,7 @@
   --size-font-base: clamp(1rem, 1.8vw, 1.4rem);
   --nav-surface-bg: var(--surface-color);
 }
+// Global Variables
 
 body {
   background-color: var(--color-bg);
@@ -39,7 +40,6 @@ body {
   min-height: 92vh;
   display: flex;
   flex-direction: column;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -51,6 +51,7 @@ a:hover {
   color: var(--color-link-hover);
   text-decoration: underline;
 }
+
 
 /* === NavBar Basic Styling === */
 .nav-container {
@@ -64,7 +65,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: background 0.3s ease-in-out; 
+  transition: background 0.3s ease-in-out;
 }
 
 .nav-expanded {
@@ -127,9 +128,7 @@ nav {
   border-radius: var(--size-border-radius);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition:
-    background 0.3s ease,
-    transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .nav-link:hover,
@@ -158,7 +157,16 @@ nav {
 }
 
 .bot-container {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 90% 90%, 100% 100%, 0% 100%, 10% 90%, 0% 85%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 85%,
+    90% 90%,
+    100% 100%,
+    0% 100%,
+    10% 90%,
+    0% 85%
+  );
   padding: 2vh;
   background-color: var(--color-surface);
   color: white;
@@ -263,9 +271,7 @@ nav {
 }
 
 .bot-socials .social-icon {
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   display: flex;
   align-items: center;
   gap: 1vh;
@@ -297,7 +303,8 @@ nav {
   z-index: 1;
 }
 .SharkSplash {
-  filter: brightness(0%) saturate(100%) invert(17%) sepia(28%) saturate(447%) hue-rotate(159deg) brightness(95%) contrast(96%);
+  filter: brightness(0%) saturate(100%) invert(17%) sepia(28%) saturate(447%)
+    hue-rotate(159deg) brightness(95%) contrast(96%);
   max-width: 80%;
   height: auto;
   scale: 115%;
