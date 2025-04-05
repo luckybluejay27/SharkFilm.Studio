@@ -16,7 +16,6 @@ defineOptions({
   name: "RecentProj"
 })
 
-// Lookup table: raw filename (no extension) => display label
 const imageLookup: Record<string, string> = {
   "Carcinogen_Temp": "☣ Carcinogen",
   "Wind and Whiskey_Temp": "Wind & Whiskey"
@@ -74,7 +73,7 @@ const images = ref([...orderedImages, ...remainingImages])
   display: flex;
   width: max-content;
   gap: 1.5rem;
-  padding-right: 4vw;
+  padding-right: 6vw; /* add larger gap to imply end */
 }
 
 .carousel-item {
