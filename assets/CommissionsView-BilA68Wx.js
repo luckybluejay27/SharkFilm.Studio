@@ -1,1 +1,0 @@
-import{d as s,c as o,a as n,o as a}from"./index-CgtR75Jh.js";const t={class:"page"},c=s({name:"Commissions",__name:"CommissionsView",setup(m){return(i,e)=>(a(),o("div",t,e[0]||(e[0]=[n("h1",null,"Commish",-1)])))}});export{c as default};
