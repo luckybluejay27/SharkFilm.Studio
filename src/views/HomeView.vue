@@ -23,33 +23,5 @@ defineOptions({
 </script>
 
 <style scoped>
-.HomeContainer {
-  height: 92vh;
-  display: flex;
-  flex-direction: column; 
-  justify-content: flex-start; 
-  align-items: center;
-  padding-top: 2rem;
-}
 
-.header1 {
-  font-size: clamp(2rem, 6vw, 3rem);
-  text-align: center;
-  width: 100%;
-}
-
-.splash-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.subtitle {
-  margin: 0 auto;
-  margin-top: 3rem;
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  font-weight: 400;
-}
 </style>

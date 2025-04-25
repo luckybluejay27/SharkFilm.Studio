@@ -1,0 +1,1 @@
+import{d as s,c as o,a,o as t}from"./index-CgtR75Jh.js";const n={class:"page"},u=s({name:"Resources",__name:"ResourceView",setup(r){return(c,e)=>(t(),o("div",n,e[0]||(e[0]=[a("h1",null,"Resources",-1)])))}});export{u as default};

@@ -322,3 +322,79 @@ nav {
     rgba(255, 255, 255, 0.06)
   );
 }
+
+.HomeContainer {
+  height: 92vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.header1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  text-align: center;
+  width: 100%;
+}
+
+.splash-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  margin: 0 auto;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-weight: 400;
+}
+
+// Carousel Items : Home Page
+
+.carousel-container {
+  width: 80vw;
+  overflow-x: auto;
+  position: relative;
+  padding-block: 2vh;
+  padding-inline: 4vw;
+  scroll-snap-type: x mandatory;
+  display: block;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.01), rgba(255,255,255,0));
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.025);
+  box-shadow: 0 0 0.25rem rgba(255,255,255,0.08);
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  padding-right: 6vw; /* add larger gap to imply end */
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: clamp(160px, 20vw, 240px);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-label {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+}
