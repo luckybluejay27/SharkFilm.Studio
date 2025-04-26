@@ -1,6 +1,9 @@
 <template>
   <div class="page">
     <h1>Contracting</h1>
+    <!-- Page Contents -->
+     
+    
   </div>
 </template>
 

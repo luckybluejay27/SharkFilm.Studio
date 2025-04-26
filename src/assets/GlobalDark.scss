@@ -52,6 +52,12 @@ a:hover {
   text-decoration: underline;
 }
 
+.header1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  text-align: center;
+  width: 100%;
+}
+
 
 /* === NavBar Basic Styling === */
 .nav-container {
@@ -332,12 +338,6 @@ nav {
   padding-top: 2rem;
 }
 
-.header1 {
-  font-size: clamp(2rem, 6vw, 3rem);
-  text-align: center;
-  width: 100%;
-}
-
 .splash-wrapper {
   display: flex;
   flex-direction: column;
@@ -398,3 +398,8 @@ nav {
   font-size: 0.9rem;
   color: #ccc;
 }
+
+// Contract View Page
+  
+
+  

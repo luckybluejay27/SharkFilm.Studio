@@ -1,0 +1,143 @@
+<template>
+  <div class="guided-canvas">
+    <h1>Page Contents</h1>
+    <div class="content-grid">
+      <div class="slideshow">
+        <img v-for="(image, index) in images" :key="index" :src="image" alt="Slide image" class="slide-image" />
+      </div>
+      <div class="services">
+        <h2>Services Rendered</h2>
+        <div class="service-cards">
+          <div class="card" v-for="(service, idx) in services" :key="idx">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="clarifications" v-if="!isMobile">
+        <h2>Clarifications</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { ref, onMounted } from 'vue';
+
+export default {
+  name: 'GuidedCanvas',
+  setup() {
+    const images = ref([
+      require('@/assets/CarouselAssets/2 Soon 2 Cheap.png'),
+      require('@/assets/CarouselAssets/Carcinogen_Temp.png'),
+      require('@/assets/CarouselAssets/Now you Soon Me.png'),
+      require('@/assets/CarouselAssets/Project Title 2: Electric Soon-Alone.png'),
+      require('@/assets/CarouselAssets/Project Title 3: Working Title.png'),
+      require('@/assets/CarouselAssets/Project Title.png'),
+      require('@/assets/CarouselAssets/Soona or Later.png'),
+      require('@/assets/CarouselAssets/Wind And Whiskey_Temp.png')
+    ]);
+
+    const services = ref([
+      { title: 'Consultation', description: 'Professional advice and project planning.' },
+      { title: 'Design Work', description: 'Custom design tailored to your needs.' }
+    ]);
+
+    const isMobile = ref(false);
+
+    const handleResize = () => {
+      isMobile.value = window.innerWidth <= 768;
+    };
+
+    onMounted(() => {
+      handleResize();
+      window.addEventListener('resize', handleResize);
+    });
+
+    return {
+      images,
+      services,
+      isMobile
+    };
+  }
+}
+</script>
+
+<style scoped>
+.guided-canvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  font-family: var(--size-font-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+  padding: var(--size-component-padding);
+}
+
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-component-padding);
+  max-width: var(--size-page-width);
+  width: 100%;
+}
+
+.slideshow {
+  flex: 2 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: contain;
+  border-radius: var(--size-border-radius);
+  margin-bottom: var(--size-component-padding);
+}
+
+.services {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-component-padding);
+  margin-top: var(--size-component-padding);
+}
+
+.card {
+  background: var(--color-component);
+  padding: var(--size-component-padding);
+  border-radius: var(--size-border-radius);
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.clarifications {
+  flex: 1 1 35%;
+  background: var(--color-component);
+  padding: var(--size-component-padding);
+  border-radius: var(--size-border-radius);
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
