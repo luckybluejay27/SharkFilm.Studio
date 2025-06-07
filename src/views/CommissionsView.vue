@@ -21,13 +21,40 @@
           <button @click="nextImage" class="nav-button right">▶</button>
         </div>
 
-        <!-- Pricing Cards -->
-        <div class="pricing-cards placeholder">
-          Pricing Cards - Top Right
+         <!-- Pricing Cards -->
+        <div class="pricing-cards">
+          <ol>
+            <li class="card">
+              Sketch
+              <hr class="price-divider" />
+              <ul>
+                <li><span class="label">Portrait</span><span class="price">$10</span></li>
+                <li><span class="label">Half Body</span><span class="price">$20</span></li>
+                <li><span class="label">Full Body</span><span class="price">$40</span></li>
+              </ul>
+            </li>
+            <li class="card">
+              Flat
+              <hr class="price-divider" />
+              <ul>
+                <li><span class="label">Portrait</span><span class="price">$25</span></li>
+                <li><span class="label">Half Body</span><span class="price">$50</span></li>
+                <li><span class="label">Full Body</span><span class="price">$90</span></li>
+              </ul>
+            </li>
+            <li class="card">
+              CellShade
+              <hr class="price-divider" />
+              <ul>
+                <li><span class="label">Portrait</span><span class="price">$30</span></li>
+                <li><span class="label">Half Body</span><span class="price">$60</span></li>
+                <li><span class="label">Full Body</span><span class="price">$110</span></li>
+              </ul>
+            </li>
+          </ol>
         </div>
-
         <!-- Terms and Conditions -->
-        <div class="tos-consider placeholder">
+        <div class="tos-consider">
           Terms and Conditions - Bottom Right
         </div>
 
@@ -69,3 +96,4 @@ const prevImage = () => {
   currentIndex.value = (currentIndex.value - 1 + images.value.length) % images.value.length;
 };
 </script>
+
