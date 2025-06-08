@@ -23,7 +23,7 @@
 
          <!-- Pricing Cards -->
         <div class="pricing-cards">
-          <ol>
+          <ol class="pricing-cards-container">
             <li class="card">
               Sketch
               <hr class="price-divider" />
@@ -96,4 +96,5 @@ const prevImage = () => {
   currentIndex.value = (currentIndex.value - 1 + images.value.length) % images.value.length;
 };
 </script>
+
 
