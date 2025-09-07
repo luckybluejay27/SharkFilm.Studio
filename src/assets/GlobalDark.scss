@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'ConcertOne';
+  src: url('./fonts/ConcertOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --color-secondary-dark: #d95252;
   --color-bg: #0d1117;
@@ -22,6 +29,7 @@
   --size-border-radius: 0.5vw;
   --size-font-base: clamp(1rem, 1.8vw, 1.4rem);
   --nav-surface-bg: #1E2B35;
+  --font-display-concertone: 'ConcertOne', serif;
 }
 // Global Variables
 
@@ -434,6 +442,7 @@ nav {
         justify-content: space-between;
         align-items: center;
         position: relative;
+        min-width: 0;
       }
 
       .pricing-cards {
@@ -442,6 +451,7 @@ nav {
         height: 100%;
         display: flex;
         align-items: stretch;
+        min-width: 0;
       }
 
       .tos-consider {
@@ -460,6 +470,12 @@ nav {
         position: relative;
       }
 
+      @media (max-width: 50vw) {
+        .slideshow {
+          max-height: 10vh;
+        }
+      }
+     
       .slideshow-image {
         max-width: 100%;
         max-height: 100%;
@@ -503,13 +519,25 @@ nav {
         right: 0.5em;
       }
 
+      .card {
+        font-size: 150%;
+        font-family: Arial, Helvetica, sans-serif;
+        .label {
+          font-weight: 600;
+          font-size: 125%;
+        }
+        ul {
+          line-height: 200%;
+        }
+      }
+
       .pricing-cards > ol {
         display: flex;
         gap: 1em;
         list-style: none;
         padding: 0;
         margin: 0;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;            /* was: nowrap */
         width: 100%;
         height: 100%;
       }
@@ -519,14 +547,14 @@ nav {
         border-radius: var(--size-border-radius);
         padding: 1em;
         box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.2);
-        flex: 1 0 0;
-        min-width: 8em;
+        flex: 1 1 18rem; 
+        min-width: 14rem;
         text-align: left;
         font-weight: bold;
         display: flex;
         flex-direction: column;
         gap: 0.5em;
-        height: 100%;
+        height: auto;    
       }
 
       .pricing-cards .card ul {
@@ -565,19 +593,35 @@ nav {
       }
 
       @media (max-width: 60em) {
-        .comms-grid {
-          grid-template-columns: 1fr;
-          grid-template-rows: auto;
-          margin-left: 0;
-        }
-
-        .slideshow-container,
-        .pricing-cards,
-        .tos-consider {
-          grid-column: 1 / 2;
-          grid-row: auto;
-        }
+      .comms-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin-left: 0;
       }
+
+      .slideshow-container,
+      .pricing-cards,
+      .tos-consider {
+        grid-column: 1 / 2;
+        grid-row: auto;
+      }
+
+      /* ensure vertical stack for cards */
+      .pricing-cards > ol {
+        display: flex;
+        gap: 1em;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .pricing-cards > ol > .card {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+      }
+    }
 
       @media (max-width: 40em) {
         .comms-grid {
@@ -593,6 +637,27 @@ nav {
 
         .pricing-cards > ol > .card {
           width: 100%;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 80em) {
+        .pricing-cards > ol {
+          flex-wrap: wrap;
+        }
+        .pricing-cards > ol > .card {
+          flex: 1 1 20rem;  /* a touch wider preference at this size */
+        }
+      }
+
+      @media (min-width: 80em) {
+        .pricing-cards > ol {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 1em; /* keep the spacing */
+        }
+        .pricing-cards > ol > .card {
+          min-width: 0;   /* override the 14rem so grid can distribute evenly */
           height: auto;
         }
       }
