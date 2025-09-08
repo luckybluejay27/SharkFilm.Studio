@@ -1,0 +1,1 @@
+import{d as s,c as o,o as a,a as t}from"./index-97VKPEra.js";const n={class:"page"},u=s({name:"Resources",__name:"ResourceView",setup(r){return(c,e)=>(a(),o("div",n,e[0]||(e[0]=[t("h1",null,"Resources",-1)])))}});export{u as default};
