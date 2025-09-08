@@ -1,14 +1,13 @@
 <template>
   <header class="nav-container" :class="{ 'nav-expanded': isNavOpen }">
-    <button class="hamburger" @click="$emit('toggle-nav')" aria-label="Toggle navigation">
-      ☰
-    </button>
+    <button class="hamburger" @click="$emit('toggle-nav')" aria-label="Toggle navigation">☰</button>
+
     <nav :class="{ 'nav-open': isNavOpen }">
       <ul class="nav-list" v-if="isNavOpen">
-        <li v-for="route in routes" :key="route.path" class="nav-item">
-          <router-link class="nav-link" :to="route.path">
-            {{ route.name || 'Unnamed Route' }}
-          </router-link>
+        <li v-for="route in routes" :key="route.name" class="nav-item">
+          <RouterLink class="nav-link" :to="{ name: route.name as string }">
+            {{ (route.meta?.title as string) ?? (route.name as string) }}
+          </RouterLink>
         </li>
       </ul>
     </nav>
@@ -16,26 +15,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
-import { useRouter } from 'vue-router';
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 
-const { isNavOpen } = defineProps({
-  isNavOpen: Boolean,
-});
+const { isNavOpen } = defineProps<{ isNavOpen: boolean }>()
+const router = useRouter()
 
-const router = useRouter();
-// Create a reactive ref for routes
-const routes = ref(router.getRoutes().filter(route => route.name && route.name !== 'unknown'));
-
-const updateRoutes = () => {
-  routes.value = router.getRoutes().filter(route => route.name && route.name !== 'unknown');
-};
-
-onMounted(() => {
-  updateRoutes();
-  const interval = setInterval(updateRoutes, 500);
-  onUnmounted(() => {
-    clearInterval(interval);
-  });
-});
+// Filter routes as needed
+const routes = computed(() =>
+  router.getRoutes().filter(r => r.meta?.showInNav)
+)
 </script>
+

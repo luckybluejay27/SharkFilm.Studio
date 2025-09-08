@@ -1,6 +1,11 @@
 <template>
   <div class="page">
-    <h1>TOS</h1>
+   <h1>Can you See me?</h1>
+   <br></br>
+   <br></br>
+   <br></br>
+   <br></br>
+   <h1> At all?</h1>
   </div>
 </template>
 

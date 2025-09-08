@@ -55,7 +55,10 @@
         </div>
         <!-- Terms and Conditions -->
         <div class="tos-consider">
-          Terms and Conditions - Bottom Right
+          <p>No extreme kinks, underage content, or non-consent themes. Monster girls, size difference, strong characters, fantasy/sci‑fi welcome. Surcharges apply for mecha, armor, complex scenes, rush jobs, or major revisions. Typical turnaround: 2 weeks (1 for rush orders). Full refunds if delays exceed a month without prior agreement, with complexity exceptions. Commercial rights require a separate license.</p>
+          <p>
+            See full Terms of Service <RouterLink :to="{ name: 'Terms' }">here</RouterLink>
+          </p>
         </div>
 
       </div>
@@ -74,14 +77,19 @@ const imageLookup: Record<string, string> = {
   "SharkWip": "Work in Progress"
 };
 
+// Grab all matching image files in CommsAssets eagerly.
+// Each entry is [path, module]. We extract the filename, then return an object
+// with the image src, its filename, and a human-friendly label.
 const modules = import.meta.glob('@/assets/CommsAssets/*.{png,jpg,jpeg,svg}', { eager: true });
 
 const rawImages = Object.entries(modules).map(([path, mod]) => {
+  // Extract filename (without extension). If not found, default to 'Untitled'.
   const filename = path.split('/').pop()?.split('.')[0] || 'Untitled';
   return {
-    src: (mod as any).default,
-    filename,
-    label: imageLookup[filename] || filename.replace(/[-_]/g, ' ')
+    src: (mod as any).default,                      // the actual image file URL
+    filename,                                       // raw filename string
+    label: imageLookup[filename] ||                 // map to friendly label if provided
+           filename.replace(/[-_]/g, ' '),          // otherwise clean up filename
   };
 });
 
@@ -96,5 +104,3 @@ const prevImage = () => {
   currentIndex.value = (currentIndex.value - 1 + images.value.length) % images.value.length;
 };
 </script>
-
-
