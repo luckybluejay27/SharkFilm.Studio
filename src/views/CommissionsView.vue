@@ -77,7 +77,7 @@ const imageLookup: Record<string, string> = {
   "SharkWip": "Work in Progress"
 };
 
-// Grab all matching image files in CommsAssets eagerly.
+// Grab all matching image files in CommsAssets.
 // Each entry is [path, module]. We extract the filename, then return an object
 // with the image src, its filename, and a human-friendly label.
 const modules = import.meta.glob('@/assets/CommsAssets/*.{png,jpg,jpeg,svg}', { eager: true });

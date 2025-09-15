@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipboard</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="sharkfilm-studios-–-commission-terms-of-service-tos">SharkFilm Studios – Commission Terms of Service (ToS)</h1>
+<p><em>Last Updated: September 8th, 2025</em></p>
+<p>By commissioning me, you acknowledge that you have read, understood, and agreed to the following Terms of Service. These terms exist to ensure clarity, fairness, and a smooth working relationship between us.</p>
+<h2 id="general-scope">1. General Scope</h2>
+<pre><code>I create anime-style artworks, ranging from simple illustrations to complex scenes, with options for NSFW commissions under specific limits (see Section 2).
+Animation work falls under a separate contract and is not covered by these terms.
+I consider myself a production-ready anime artist — my work is clean, efficient, and built on strong fundamentals, streamlined for the needs of animation.
+</code></pre>
+<h2 id="subject-matter-guidelines">2. Subject Matter Guidelines</h2>
+<p>I will draw:</p>
+<pre><code>- SFW &amp; NSFW anime-style illustrations.
+- Fantasy or sci-fi themes.
+- Attractive/appealing strong characters.
+- Monster girls.
+- Size difference in characters (within reasonable limits).
+- Horror-themed material (without sexualized non-consent).
+</code></pre>
+<p>I will NOT draw</p>
+<pre><code>- Full BDSM scenarios or extreme kinks.
+- Fetishes involving non-consent, implied non-consent, or "questionable" consent.
+- Age play, underage characters, or any sexualized depictions involving minors.
+- Extreme fetish content such as vore, inflation, egg-laying, scat, watersports, gore sexualization, or any similar themes.
+- Mecha/armor/complex architecture without surcharge agreement (see Section 3).
+</code></pre>
+<h2 id="complexity--surcharges">3. Complexity &amp; Surcharges</h2>
+<p>Additional charges apply for:</p>
+<pre><code>- Highly complex designs, mecha, armor, or heavy environmental/architectural elements.
+- Detailed monsters (non-sexual).
+- Major revisions within a stage (sketch, flats, colors, shading).
+- Moving an artwork up or down a complexity tier after work has started.
+- Rush deadlines (see Section 5).
+</code></pre>
+<p>Exact surcharges will be discussed and agreed to in writing before work begins.</p>
+<h2 id="process--approval">4. Process &amp; Approval</h2>
+<p>The creation process includes four main steps:</p>
+<pre><code>Sketch
+Flats
+Colors
+Shading / Final Touches
+</code></pre>
+<p>You will be given review points at each step for feedback and minor adjustments.<br>
+Two minor revisions are included at each stage. Additional adjustments beyond this will be billed under Section 3.<br>
+Major revisions outside of these points — or moving between complexity tiers — will be billed under Section 3.</p>
+<h2 id="turnaround-times">5. Turnaround Times</h2>
+<pre><code>Simple pieces: Typically completed faster, depending on current queue.
+Complex drawings: Minimum turnaround time of two weeks.
+Rush jobs (if agreed upon): Minimum turnaround time of one week, with an additional surcharge.
+Turnaround starts after payment is received in full and all reference material is provided.
+</code></pre>
+<h2 id="payment">6. Payment</h2>
+<pre><code>Payment must be made upfront via Square or Cashapp. 
+Pricing is variable — see my current rates on [Sharkfilm.studio].
+Work does not begin until full payment is received unless otherwise arranged.
+For larger or long-term projects, partial or milestone-based payments may be arranged. Unless otherwise agreed, work will not progress beyond the current paid stage.
+</code></pre>
+<h2 id="refunds--cancellations">7. Refunds &amp; Cancellations</h2>
+<h3 id="refund-policy">Refund Policy</h3>
+<ul>
+<li><strong>Before work begins:</strong> Full refund if I have not yet started your commission.</li>
+<li><strong>Early stage cancellation:</strong> If you cancel while the piece is still in sketch or rough draft stage, you’ll receive a partial refund proportional to the work completed.</li>
+<li><strong>Delays:</strong> For standard commissions (1–3 characters, no extreme detail), if completion takes longer than one month without prior agreement on an extended timeline, you are entitled to a full refund.</li>
+<li><strong>Complex works:</strong> Large or highly detailed pieces (e.g. 4+ characters, complex architecture, intricate designs) may reasonably take longer than one month; specific timelines will be agreed upon in writing before work begins.</li>
+<li><strong>Rush orders:</strong> If I do not complete a rush order within the agreed timeframe, you will receive a full refund.</li>
+<li><strong>Artist cancellation:</strong> If I am unable to complete your project for any reason, you will receive a full refund regardless of progress.</li>
+</ul>
+<h2 id="ownership--usage">8. Ownership &amp; Usage</h2>
+<p><strong>Delivery &amp; File Storage:</strong> Completed works are delivered as high-resolution PNG (and/or requested format if agreed upon in advance). PSD, or layered source files are available for an additional fee. Source files are stored for 90 days after delivery; after that SharkFilm Studios may delete or archive them without guarantee of recovery.</p>
+<ul>
+<li><strong>Copyright:</strong> I retain full copyright and reproduction rights to all commissioned artwork unless otherwise agreed in writing.</li>
+<li><strong>Client rights:</strong> You may not claim the artwork as your own creation or resell it. Physical products for personal use (e.g. T-shirts, mousepads, body pillows) are permitted.</li>
+<li><strong>Personal use:</strong> Avatars, profile pictures, printing for yourself, and other non-commercial uses are always allowed.</li>
+<li><strong>Commercial use:</strong> Any commercial application (including merchandise, advertising, or monetized content) requires a separate licensing agreement and may involve an additional fee.</li>
+<li><strong>Artist rights:</strong> I reserve the right to share or display completed artwork on my own platforms (e.g. portfolio, social media), unless a privacy add-on fee is arranged in advance.</li>
+<li>In the event of team or collaborative production, SharkFilm Studios and its contracted artists retain the right to display completed works in individual and studio portfolios unless otherwise agreed to in writing.</li>
+</ul>
+<h1 id="jurisdiction--governing-law">. Jurisdiction / Governing Law</h1>
+<p>These terms are governed by the laws of Oregon, United States, and any disputes will be resolved in the courts located in Oregon, United States.</p>
+<h2 id="agreement">9. Agreement</h2>
+<p>By commissioning me, you confirm that:</p>
+<ul>
+<li>You are 18 years or older.</li>
+<li>You have provided accurate references for your request.</li>
+<li>You accept that these terms may be updated periodically, and the version agreed upon at the time of payment will apply to your commission.</li>
+<li>You confirm you have the legal right to use and request all characters, designs, references, and materials provided to me. SharkFilm Studios assumes no responsibility for legal disputes arising from materials you submit.</li>
+</ul>
+</div>
+</body>
+
+</html>
