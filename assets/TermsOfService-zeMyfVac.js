@@ -1,1 +1,0 @@
-import{_ as n,c as r,a as l,o as s}from"./index-97VKPEra.js";const o={},t={class:"page"};function a(u,e){return s(),r("div",t,e[0]||(e[0]=[l("h1",null,"Can you See me?",-1),l("br",null,null,-1),l("br",null,null,-1),l("br",null,null,-1),l("br",null,null,-1),l("h1",null," At all?",-1)]))}const _=n(o,[["render",a]]);export{_ as default};
